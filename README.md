@@ -41,8 +41,9 @@
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>  
 <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边  -->  
-<!-- 标签表示：强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览；尤其要注意的是content里多个属性的设置一定要用分号+空格来隔开，如果不规范将不会起作用。  -->  
 ```
+> 标签表示：强制让文档的宽度与设备的宽度保持1:1，并且文档最大的宽度比例是1.0，且不允许用户点击屏幕放大浏览；尤其要注意的是content里多个属性的设置一定要用分号+空格来隔开，如果不规范将不会起作用。
+
 其中：
 
 * viewport - 能优化移动浏览器的显示。如果不是响应式网站，不要使用initial-scale或者禁用缩放。
@@ -56,9 +57,15 @@
 
 注意，很多人使用initial-scale=1到非响应式网站上，这会让网站以100%宽度渲染，用户需要手动移动页面或者缩放。如果和initial-scale=1同时使用user-scalable=no或maximum-scale=1，则用户将不能放大/缩小网页来看到全部的内容。
 
+* apple-mobile-web-app-capable
+
 ```
-<meta name="apple-mobile-web-app-capable" content="yes" /> <!-- iphone设备中的safari私有meta标签,启用 WebApp 全屏模式 伪装app，离线应用。 -->  
-<meta name="apple-mobile-web-app-status-bar-style"content="black-translucent" />  
+<meta name="apple-mobile-web-app-capable" content="yes" />
+```
+> iphone设备中的safari私有meta标签,启用 WebApp 全屏模式 伪装app，离线应用
+
+```
+<meta name="apple-mobile-web-app-status-bar-style"content="black-translucent" />  
 <!-- 隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。content的值为default | black | black-translucent 。--> 
 <meta name="apple-mobile-web-app-title"content="标题">  <!-- 添加到主屏后的标题 --> 
 <meta content="telephone=no"name="format-detection" />  <!-- 忽略数字自动识别为电话号码 -->
