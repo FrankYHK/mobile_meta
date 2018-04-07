@@ -21,10 +21,21 @@
 
 ### h5 常用meta标签及说明
 #### SEO相关
+* keywords
 ```
-<meta name="keywords" content="your tags" /> //页面关键字,不应超过 874 个字符.
-<meta name="description"content="150 words" />  //页面描述,不超过 150 个字符.
-<meta name="robots" content="index,follow" />  //搜索引擎索引方式.
+<meta name="keywords" content="your tags" />
+```
+>页面关键字,不应超过 874 个字符.
+
+* description
+```
+<meta name="description"content="150 words" />
+```
+>页面描述,不超过 150 个字符.
+
+* robots
+```
+<meta name="robots" content="index,follow" />  //
 <!--  
     all：文件将被检索，且页面上的链接可以被查询；
     none：文件将不被检索，且页面上的链接不可以被查询；
@@ -33,9 +44,18 @@
     noindex：文件将不被检索；
     nofollow：页面上的链接不可以被查询。
  -->
-<meta http-equiv="refresh" content="0;url=" />  //页面刷新和重定向
-<meta name="author" content="author name" /> <!-- 定义网页作者 -->
 ```
+>搜索引擎索引方式.
+
+* 页面刷新和重定向
+```
+<meta http-equiv="refresh" content="0;url=" />
+```
+* author
+```
+<meta name="author" content="author name" />
+```
+>定义网页作者.
 #### 移动端常用
 
 ```
@@ -64,38 +84,90 @@
 ```
 > iphone设备中的safari私有meta标签,启用 WebApp 全屏模式 伪装app，离线应用
 
+* apple-mobile-web-app-status-bar-style
 ```
-<meta name="apple-mobile-web-app-status-bar-style"content="black-translucent" />  
-<!-- 隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。content的值为default | black | black-translucent 。--> 
-<meta name="apple-mobile-web-app-title"content="标题">  <!-- 添加到主屏后的标题 --> 
-<meta content="telephone=no"name="format-detection" />  <!-- 忽略数字自动识别为电话号码 -->
-<meta content="email=no"name="format-detection" />    <!-- 忽略识别邮箱 --> 
-<meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 iphone设备中的safari私有meta标签-->
-<meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
-<!-- 启用360浏览器的极速模式(webkit) -->
+<meta name="apple-mobile-web-app-status-bar-style"content="black-translucent" />
+```
+>隐藏状态栏/设置状态栏颜色：只有在开启WebApp全屏模式时才生效。content的值为default | black | black-translucent
+
+* apple-mobile-web-app-title
+```
+<meta name="apple-mobile-web-app-title"content="标题">
+```
+>添加到主屏后的标题
+
+* format-detection telephone
+```
+<meta content="telephone=no"name="format-detection" />
+```
+>忽略数字自动识别为电话号码
+
+* format-detection email
+```
+<meta content="email=no"name="format-detection" />
+```
+>忽略识别邮箱
+
+* apple-mobile-web-app-capable
+```
+<meta name="apple-mobile-web-app-capable" content="yes" />
+```
+>删除苹果默认的工具栏和菜单栏 iphone设备中的safari私有meta标签
+
+* apple-mobile-web-app-status-bar-style
+```
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+```
+>设置苹果工具栏颜色
+
+* renderer
+```
 <meta name="renderer" content="webkit">
-<!-- 避免IE使用兼容模式 -->
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
-<meta name="HandheldFriendly" content="true">
-<!-- 微软的老式浏览器 -->
-<meta name="MobileOptimized" content="320">
-<!-- uc强制竖屏 -->
-<meta name="screen-orientation" content="portrait">
-<!-- QQ强制竖屏 -->
-<meta name="x5-orientation" content="portrait">
-<!-- UC强制全屏 -->
-<meta name="full-screen" content="yes">
-<!-- QQ强制全屏 -->
-<meta name="x5-fullscreen" content="true">
-<!-- UC应用模式 -->
-<meta name="browsermode" content="application">
-<!-- QQ应用模式 -->
-<meta name="x5-page-mode" content="app">
-<!-- windows phone 点击无高光 -->
-<meta name="msapplication-tap-highlight" content="no">
-<!-- 适应移动端end -->
 ```
+>启用360浏览器的极速模式(webkit)
+
+* HandheldFriendly
+```
+<meta name="HandheldFriendly" content="true">
+```
+>针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓
+
+* screen-orientation
+```
+<meta name="screen-orientation" content="portrait">
+```
+>uc强制竖屏
+
+* full-screen
+```
+<meta name="full-screen" content="yes">
+```
+>UC强制全屏
+
+* browsermode
+```
+<meta name="browsermode" content="application">
+```
+>UC应用模式
+
+* x5-orientation
+```
+<meta name="x5-orientation" content="portrait">
+```
+>QQ强制竖屏
+
+* x5-fullscreen
+```
+<meta name="x5-fullscreen" content="true">
+```
+>QQ强制全屏
+
+* x5-page-mode
+```
+<meta name="x5-page-mode" content="app">
+```
+>QQ应用模式
+
 
 # 移动端适配方案 动态rem、vw适配 。。。 
 未完，待续。。。
